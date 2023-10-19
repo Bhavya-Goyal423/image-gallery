@@ -1,16 +1,42 @@
 .image-wrapper {
   border: 1px solid #ced4da;
+  cursor: pointer;
 }
 
 .details {
   display: flex;
-  justify-content: space-between;
+  gap: 1.2rem;
   padding: 1.2rem 1.2rem;
   align-items: center;
 }
 
 .user-profile {
   border-radius: 50%;
+}
+.post-details {
+  width: 100%;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-full-name {
+  font-weight: 500;
+}
+
+.user-name {
+  color: #495057;
+}
+
+.likes-count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.like-icon {
+  font-size: 1.8rem;
 }
 
 .image-wrapper .query-image {

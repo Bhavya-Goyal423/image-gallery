@@ -125,8 +125,6 @@ const CustomContext = ({ children }) => {
   ]);
   const [abortController, setAbortController] = useState(new AbortController());
 
-  console.log(data);
-
   const fetchData = async () => {
     try {
       const dataArr = [];
@@ -134,7 +132,7 @@ const CustomContext = ({ children }) => {
       const newController = new AbortController();
       setAbortController(newController);
       const res = await fetch(
-        `${BASE_URL}client_id=${CLIENT_ID}&query=${queryStr}`,
+        `${BASE_URL}client_id=${CLIENT_ID}&query=${queryStr}&per_page=15`,
         { signal: newController.signal }
       );
       const data = await res.json();
@@ -157,9 +155,9 @@ const CustomContext = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, [queryStr]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [queryStr]);
 
   return (
     <dataContext.Provider value={{ queryStr, setQueryStr, data }}>
