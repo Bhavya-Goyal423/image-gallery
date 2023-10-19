@@ -1,0 +1,15 @@
+.image-showcase {
+  max-width: 150rem;
+  margin: 5.4rem auto;
+  padding: 0 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  justify-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  align-self: start;
+}

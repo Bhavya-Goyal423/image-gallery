@@ -19,12 +19,7 @@ export default function Navbar() {
       </div>
       <div className="theme-cta">
         <span className="theme-mode">Dark Mode</span>
-        <Switch
-          checked={isDark}
-          onChange={handleTheme}
-          defaultChecked
-          color="default"
-        />
+        <Switch checked={isDark} onChange={handleTheme} color="default" />
       </div>
     </div>
   );

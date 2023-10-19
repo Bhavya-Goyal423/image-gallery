@@ -1,0 +1,18 @@
+.image-wrapper {
+  border: 1px solid #ced4da;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1.2rem;
+  align-items: center;
+}
+
+.user-profile {
+  border-radius: 50%;
+}
+
+.image-wrapper .query-image {
+  width: 100%;
+}
