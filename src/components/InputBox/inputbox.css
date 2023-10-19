@@ -1,0 +1,26 @@
+.background {
+  height: 50vh;
+  background: url("https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&q=80&w=2076&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-attachment: local;
+  background-position: 50% 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.input-box {
+  width: 40%;
+}
+
+.input {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 11px;
+  border: none;
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0.1rem 0.1rem rgb(0, 0, 0);
+}
