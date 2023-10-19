@@ -21,7 +21,7 @@ export default function ImageList() {
   }, []);
 
   useEffect(() => {
-    if (windowWidth > 1500) {
+    if (windowWidth < 3600 && windowWidth > 1200) {
       const chunks = [[], [], [], []];
       let i = 0;
       let k = 0;
@@ -32,8 +32,32 @@ export default function ImageList() {
         k = i % 4;
       }
       setDataChunks(chunks);
+    } else if (windowWidth < 1200 && windowWidth > 800) {
+      const chunks = [[], [], []];
+      let i = 0;
+      let k = 0;
+
+      while (i < data.length) {
+        chunks[k].push(data[i]);
+        i++;
+        k = i % 3;
+      }
+      setDataChunks(chunks);
+    } else if (windowWidth < 800 && windowWidth > 560) {
+      const chunks = [[], []];
+      let i = 0;
+      let k = 0;
+
+      while (i < data.length) {
+        chunks[k].push(data[i]);
+        i++;
+        k = i % 2;
+      }
+      setDataChunks(chunks);
+    } else {
+      setDataChunks([data]);
     }
-  }, [data]);
+  }, [data, windowWidth]);
 
   return (
     <div className="image-showcase">

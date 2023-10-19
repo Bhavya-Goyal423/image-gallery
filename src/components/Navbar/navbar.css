@@ -25,6 +25,12 @@
   cursor: pointer;
 }
 
+.menu-icon {
+  font-size: 2.4rem;
+  cursor: pointer;
+  display: none;
+}
+
 .theme-cta {
   display: flex;
   align-items: center;
@@ -32,4 +38,8 @@
 
 .theme-mode {
   font-size: 1.8rem;
+}
+.moon-icon {
+  font-size: 2.4rem;
+  display: none;
 }

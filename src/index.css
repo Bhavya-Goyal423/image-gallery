@@ -8,3 +8,80 @@
 html {
   font-size: 62.5%;
 }
+
+/* ! 1500px   */
+@media (width<93em) {
+  .image-showcase {
+    max-width: 120rem;
+  }
+}
+/* ! 1200px   */
+@media (width<75em) {
+  .image-showcase {
+    max-width: 100rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ! 1000px   */
+@media (width<62em) {
+  .image-showcase {
+    max-width: 80rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ! 800px  */
+@media (width<50em) {
+  .image-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3.2rem;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+  .input-box {
+    width: 60%;
+  }
+}
+/* ! 650 px  */
+@media (width<40em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+/* !560 px  */
+@media (width<35em) {
+  .image-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+/* !450 px  */
+@media (width<28em) {
+  html {
+    font-size: 50%;
+  }
+  .image-showcase {
+    margin-top: 4.2rem;
+    padding: 0 2.4rem;
+  }
+  .input-box {
+    width: 70%;
+  }
+}
+/* !380 px  */
+@media (width<23em) {
+  .theme-mode {
+    display: none;
+  }
+  .moon-icon {
+    display: block;
+  }
+  html {
+    font-size: 43.75%;
+  }
+  .input-box {
+    width: 80%;
+  }
+}
