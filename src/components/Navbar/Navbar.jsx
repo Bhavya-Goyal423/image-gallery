@@ -1,11 +1,11 @@
 import "./navbar.css";
 import Switch from "@mui/material/Switch";
-import { useState } from "react";
+import { useValue } from "../../CustomContext";
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useValue();
   const handleTheme = (e) => {
-    setIsDark(e.target.checked);
+    setIsDarkMode(e.target.checked);
   };
   return (
     <div className="navbar">
@@ -259,7 +259,7 @@ export default function Navbar() {
             ></animate>
           </circle>
         </svg>
-        <Switch checked={isDark} onChange={handleTheme} color="default" />
+        <Switch checked={isDarkMode} onChange={handleTheme} color="default" />
       </div>
     </div>
   );

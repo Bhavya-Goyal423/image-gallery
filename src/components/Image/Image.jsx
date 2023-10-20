@@ -1,15 +1,28 @@
 import "./image.css";
+import { useValue } from "../../CustomContext";
 
 export default function Image({ data }) {
+  const { isDarkMode } = useValue();
   return (
-    <div className="image-wrapper">
+    <div
+      className="image-wrapper"
+      style={isDarkMode ? { border: "1px solid #495057" } : undefined}
+    >
       <img className="query-image" src={data.thumb} alt="" />
-      <div className="details">
+      <div
+        className="details"
+        style={isDarkMode ? { backgroundColor: "#212529" } : undefined}
+      >
         <img className="user-profile" src={data.userProfile} alt="" />
         <div className="post-details">
           <div className="user-details">
             <p className="user-full-name">{data.user}</p>
-            <p className="user-name">{data.username}</p>
+            <p
+              className="user-name"
+              style={isDarkMode ? { color: "#adb5bd" } : undefined}
+            >
+              {data.username}
+            </p>
           </div>
           <div className="likes-count">
             <svg

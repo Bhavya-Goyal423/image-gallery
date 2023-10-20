@@ -11,6 +11,7 @@ export const useValue = () => {
 
 const CustomContext = ({ children }) => {
   const [queryStr, setQueryStr] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [data, setData] = useState([
     {
       id: "zhFBDjczpl4",
@@ -160,7 +161,9 @@ const CustomContext = ({ children }) => {
   // }, [queryStr]);
 
   return (
-    <dataContext.Provider value={{ queryStr, setQueryStr, data }}>
+    <dataContext.Provider
+      value={{ queryStr, setQueryStr, data, isDarkMode, setIsDarkMode }}
+    >
       {children}
     </dataContext.Provider>
   );

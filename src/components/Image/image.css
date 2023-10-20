@@ -1,6 +1,9 @@
 .image-wrapper {
   border: 1px solid #ced4da;
   cursor: pointer;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
 }
 
 .details {
@@ -8,6 +11,7 @@
   gap: 1.2rem;
   padding: 1.2rem 1.2rem;
   align-items: center;
+  border-radius: 0 0 11px 11px;
 }
 
 .user-profile {
@@ -41,4 +45,5 @@
 
 .image-wrapper .query-image {
   width: 100%;
+  border-radius: 11px 11px 0 0;
 }
