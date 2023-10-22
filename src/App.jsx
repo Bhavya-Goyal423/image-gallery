@@ -12,11 +12,9 @@ function App() {
     if (isDarkMode) {
       document.body.style.backgroundColor = "#343a40";
       document.body.style.color = "#f8f9fa";
-      console.log("Dark");
     } else {
       document.body.style.backgroundColor = "#fff";
       document.body.style.color = "#000";
-      console.log("Light");
     }
   }, [isDarkMode]);
 

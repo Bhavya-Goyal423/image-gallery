@@ -6,7 +6,10 @@ import { useEffect, useState } from "react";
 export default function ImageList() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [dataChunks, setDataChunks] = useState([]);
+  const [selected, setSelected] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { data } = useValue();
+  console.log(isModalOpen);
 
   useEffect(() => {
     const handleWidth = () => {
@@ -64,7 +67,14 @@ export default function ImageList() {
       {dataChunks.map((data, idx) => (
         <div className={`grid grid-${idx + 1}`} key={idx}>
           {data.map((d) => (
-            <Image key={d.id} data={d} />
+            <Image
+              key={d.id}
+              data={d}
+              selected={selected}
+              setSelected={setSelected}
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
+            />
           ))}
         </div>
       ))}
