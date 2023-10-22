@@ -156,9 +156,9 @@ const CustomContext = ({ children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, [queryStr]);
+  useEffect(() => {
+    fetchData();
+  }, [queryStr]);
 
   return (
     <dataContext.Provider
